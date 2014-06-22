@@ -1,4 +1,7 @@
-#this function set,get the matrix and set and get the inverse
+#this function set,get the matrix and set and get the inverse of matrix 
+# The function includes two function makeCacheMatrix & Cachesolve
+#I just do some modification in the example and change vector to matrix and mean to solve
+# and also some change in name
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
         set <- function(y) {
@@ -12,6 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
              setInv = setInv,
              getInv = getInv)
 }
+# this function return the inverse of matrix but it check at first whether the inverse in calculated perviousely or not
 
 cacheSolve <- function(x, ...) {
         m <- x$getInv()
